@@ -1,0 +1,30 @@
+<ng-container *ngIf="!link.children || !link.children.length; else linkChild">
+    <a *ngIf="(link.requiresAdmin && isAdminUser) || !link.requiresAdmin" class=" link__menu"
+        [routerLink]="link.routeLink" routerLinkActive="active">
+        <mat-icon>{{ link.icon }}</mat-icon>
+        {{ link.label }}
+    </a>
+</ng-container>
+
+
+<ng-template #linkChild>
+    <button type="button" [ngClass]="link.openTab ? 'collapsible active' : 'collapsible'"
+        (click)="link.openTab = !link.openTab">
+        <div class="button-label">
+            <mat-icon>{{ link.icon }}</mat-icon>
+            <span>{{ link.label }}</span>
+        </div>
+
+        <mat-icon>{{ link.openTab ? 'expand_less' : 'expand_more' }}</mat-icon>
+    </button>
+
+    <ul class="sub-links" [@slideInOut]="link.openTab">
+        <ng-container *ngFor="let subLink of link.children; index as i">
+            <li *ngIf="(subLink.requiresAdmin && isAdminUser) || !subLink.requiresAdmin">
+                <a class="sub-link__menu" [routerLink]="subLink.routeLink" routerLinkActive="active">
+                    {{ subLink.label }}
+                </a>
+            </li>
+        </ng-container>
+    </ul>
+</ng-template>
