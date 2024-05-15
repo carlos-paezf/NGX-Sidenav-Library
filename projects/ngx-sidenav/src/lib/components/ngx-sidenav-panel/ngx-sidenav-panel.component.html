@@ -1,0 +1,21 @@
+<button class="sidenav__toggle" mat-icon-button color="primary" aria-label="Toggle" (click)="toggleDrawer()">
+    <mat-icon>swap_horiz</mat-icon>
+</button>
+
+
+<div class="sidenav">
+    <ng-container select="[ngx-sidenav-logo-app]">
+        <!-- <picture ngx-sidenav-logo-app>
+            <img [src]="logoSrc" alt="Logo del Banco de la República">
+        </picture> -->
+    </ng-container>
+
+
+    <div class="sidenav__content">
+        <ul>
+            <li *ngFor="let link of linksMenu; index as i">
+                <ngx-sidenav-menu-item [link]="link" [isAdminUser]="isAdminUser" />
+            </li>
+        </ul>
+    </div>
+</div>
