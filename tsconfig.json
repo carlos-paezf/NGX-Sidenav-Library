@@ -13,7 +13,7 @@
     "sourceMap": true,
     "paths": {
       "ngx-sidenav": [
-        "dist/ngx-sidenav"
+        "projects/ngx-sidenav/src/public-api.ts"
       ]
     },
     "declaration": false,
