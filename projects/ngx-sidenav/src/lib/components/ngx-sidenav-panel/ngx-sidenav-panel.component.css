@@ -1,0 +1,6 @@
+.sidenav__toggle {
+    position: absolute;
+    top: 1rem;
+    right: 5px;
+    z-index: 5;
+}
