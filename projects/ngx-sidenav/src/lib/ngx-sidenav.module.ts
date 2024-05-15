@@ -1,16 +1,12 @@
 import { NgModule } from '@angular/core';
-import { NgxSidenavComponent } from './ngx-sidenav.component';
 
 
-
-@NgModule({
-  declarations: [
-    NgxSidenavComponent
-  ],
-  imports: [
-  ],
-  exports: [
-    NgxSidenavComponent
-  ]
-})
+@NgModule( {
+    declarations: [
+    ],
+    imports: [
+    ],
+    exports: [
+    ]
+} )
 export class NgxSidenavModule { }
