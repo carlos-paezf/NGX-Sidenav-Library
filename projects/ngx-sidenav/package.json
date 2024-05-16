@@ -10,5 +10,9 @@
     "dependencies": {
         "tslib": "^2.3.0"
     },
-    "sideEffects": false
+    "sideEffects": false,
+    "author": {
+        "name": "Carlos David Páez Ferreira",
+        "url": "https://github.com/carlos-paezf"
+    }
 }
